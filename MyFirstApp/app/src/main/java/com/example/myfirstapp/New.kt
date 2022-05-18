@@ -38,7 +38,7 @@ class New : Fragment() {
                 myNews = getBestNews()
             }
             val text = view.findViewById<TextView>(R.id.tw)
-            text.text = myNews[getInt(ARG_OBJECT)].News
+            text.text = getInt(ARG_OBJECT).toString()
 //            val button = view.findViewById<Button>(R.id.button)
 //            button.setBa
         }
@@ -46,15 +46,15 @@ class New : Fragment() {
 
     private suspend fun getBestNews() : MutableList<NewsAndImages> {
         val sUrl = "https://www.eurosport.com/football/"
-        val doc = Jsoup.connect(sUrl).get()
-        val news = doc.select(".watchpage")
-        val list: MutableList<NewsAndImages> = mutableListOf()
-
-        list.add(NewsAndImages(news.html(), ""))
-        list.add(NewsAndImages(news.html(), ""))
-        list.add(NewsAndImages(news.html(), ""))
-        list.add(NewsAndImages(news.html(), ""))
-        list.add(NewsAndImages(news.html(), ""))
-        return list
+//        val doc = Jsoup.connect(sUrl).get()
+//        val news = doc.select(".watchpage")
+//        val list: MutableList<NewsAndImages> = mutableListOf()
+//
+//        list.add(NewsAndImages(news.html(), ""))
+//        list.add(NewsAndImages(news.html(), ""))
+//        list.add(NewsAndImages(news.html(), ""))
+//        list.add(NewsAndImages(news.html(), ""))
+//        list.add(NewsAndImages(news.html(), ""))
+        return mutableListOf()
     }
 }

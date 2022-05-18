@@ -18,7 +18,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp">
 
             <Button
                 android:id="@+id/imageButton1"
@@ -45,7 +46,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/soccer_ball_computer_graphics_background_88108451">
 
             <Button
                 android:id="@+id/imageButton2"
@@ -68,6 +71,29 @@
                 android:textColor="@color/white"
                 android:textSize="60sp" />
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/contributionratings_visual_messi_1920_1280x720">
+            <Button
+                android:onClick="findMatches"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="auto"
+                android:gravity="center"
+                android:text="@string/find_match"
+                android:textColor="@color/white"
+                android:textSize="60sp" />
+        </RelativeLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -48,7 +48,7 @@ class MatchesDao(val context: Context) {
         val dataList: MutableList<TodayMatches.Match> = mutableListOf()
         val cursor = db?.query(Matches.TABLE_NAME,
             arrayOf(Matches.COLUMN_NAME_TEAM1, Matches.COLUMN_NAME_SCORE, Matches.COLUMN_NAME_TEAM2),
-            "${Matches.COLUMN_NAME_TEAM1} == $team OR ${Matches.COLUMN_NAME_TEAM2} == $team",
+            "${Matches.COLUMN_NAME_TEAM1} == \"$team\" OR ${Matches.COLUMN_NAME_TEAM2} == \"$team\"",
             null, null, null, null
         )
 
